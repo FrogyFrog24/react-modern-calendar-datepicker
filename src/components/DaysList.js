@@ -143,6 +143,10 @@ const DaysList = ({
     return classNames;
   };
 
+  const getDayStyles = dayItem => {
+    return customDaysClassName.find(day => isSameDay(dayItem, day))?.style;
+  }
+
   const getViewMonthDays = date => {
     // to match month starting date with the correct weekday label
     const prependingBlankDays = createUniqueRange(getMonthFirstWeekday(date), 'starting-blank');
@@ -185,6 +189,7 @@ const DaysList = ({
       (weekDayItem, weekDayItemIndex) => weekDayItem.isWeekend && weekDayItemIndex === index,
     );
     const additionalClass = getDayClassNames({ ...dayItem, isWeekend, isStandard, isDisabled });
+    const additionalStyle = getDayStyles(dayItem);
     const dayLabel = `${weekDaysList[index].name}, ${day} ${getMonthName(month)} ${year}`;
     const isOnActiveSlide = month === activeDate.month;
     const dayStatus = getDayStatus(dayItem);
@@ -199,6 +204,7 @@ const DaysList = ({
       <div
         tabIndex={shouldEnableKeyboardNavigation ? '0' : '-1'}
         key={id}
+        style={additionalStyle}
         className={`Calendar__day -${isRtl ? 'rtl' : 'ltr'} ${additionalClass}`}
         onClick={() => {
           handleDayPress({ ...dayItem, isDisabled });
@@ -277,8 +283,8 @@ const DaysList = ({
 };
 
 DaysList.defaultProps = {
-  onChange: () => {},
-  onDisabledDayError: () => {},
+  onChange: () => { },
+  onDisabledDayError: () => { },
   disabledDays: [],
   calendarTodayClassName: '',
   calendarSelectedDayClassName: '',

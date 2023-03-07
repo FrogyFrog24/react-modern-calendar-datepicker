@@ -1,7 +1,7 @@
 {
-  "name": "react-modern-calendar-datepicker",
+  "name": "@frogyfrog24/react-modern-calendar-datepicker",
   "version": "3.1.6",
-  "description": "A modern, beautiful, customizable date picker for React",
+  "description": "A modern, beautiful, customizable date picker for React - of Kiarash-Z",
   "main": "lib/index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -20,6 +20,9 @@
     "lib",
     "index.d.ts"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Kiarash Zarinmehr",
   "homepage": "https://kiarash-z.github.io/react-modern-calendar-datepicker",
   "repository": {
