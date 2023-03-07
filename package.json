@@ -23,14 +23,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Kiarash Zarinmehr",
-  "homepage": "https://kiarash-z.github.io/react-modern-calendar-datepicker",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kiarash-Z/react-modern-calendar-datepicker.git"
+    "url": "https://github.com/FrogyFrog24/react-modern-calendar-datepicker.git"
   },
   "bugs": {
-    "url": "https://github.com/Kiarash-Z/react-modern-calendar-datepicker/issues"
+    "url": "https://github.com/FrogyFrog24/react-modern-calendar-datepicker.git/issues"
   },
   "license": "MIT",
   "keywords": [
